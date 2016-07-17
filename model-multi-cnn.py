@@ -17,9 +17,9 @@ from tensorflow.contrib.learn import monitors
 
 # In[2]:
 
-get_ipython().magic(u'matplotlib inline')
-import matplotlib.pyplot as plt
-from PIL import Image
+#get_ipython().magic(u'matplotlib inline')
+#import matplotlib.pyplot as plt
+#from PIL import Image
 import numpy as np
 
 
@@ -45,8 +45,8 @@ tf.__version__
 
 #benign_file = '/Users/chitrangtalaviya/Documents/Tensorflow/all-images/200X/benign_p/BENIGN0.p'
 #malignant_file = '/Users/chitrangtalaviya/Documents/Tensorflow/all-images/200X/malignant_p/MALIGNANT0.p'
-benign_file = 'small-data/BENIGN.pkl'
-malignant_file = 'small-data/MALIGNANT.pkl'
+benign_file = '/home/ubuntu/TeamOnkos/small-data/BENIGN.pkl'
+malignant_file = '/home/ubuntu/TeamOnkos/small-data/MALIGNANT.pkl'
 
 benign_arr = pickle.load(open(benign_file, 'rb'))
 malignant_arr = pickle.load(open(malignant_file, 'rb'))
@@ -54,27 +54,29 @@ malignant_arr = pickle.load(open(malignant_file, 'rb'))
 
 # In[7]:
 
-print(benign_arr.shape)
-plt.imshow(benign_arr[0])
-print(malignant_arr.shape)
-plt.imshow(malignant_arr[0])
+#print(benign_arr.shape)
+#plt.imshow(benign_arr[0])
+#print(malignant_arr.shape)
+#plt.imshow(malignant_arr[0])
 
 
 # In[8]:
 
-X = np.concatenate((benign_arr, malignant_arr), axis=0)
-X.shape
+#X = np.concatenate((benign_arr, malignant_arr), axis=0)
+#X.shape
 
 
 # In[9]:
 
-y = np.concatenate((np.zeros(1009), np.ones(1009)))
-y.shape
+#y = np.concatenate((np.zeros(1009), np.ones(1009)))
+#y.shape
 
 
 # ## Large Dataset
 
 # In[ ]:
+X = None
+y = None
 
 # 623 benign
 for i in range(0, 90):
